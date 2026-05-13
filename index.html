@@ -10,7 +10,6 @@
 
 <meta name="robots" content="index, follow">
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18107368407"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -25,14 +24,49 @@ body {
     font-family: Arial, sans-serif;
     background: #0a0f1c;
     color: white;
+    scroll-behavior: smooth;
+}
+
+/* NAV */
+nav {
+    background: #0b3d91;
+    padding: 14px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .nav-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+/* FIX SCROLL OVERLAP */
+.section,
+.hero,
+.contact {
+    scroll-margin-top: 90px;
 }
 
 /* HERO */
 .hero {
-    padding: 90px 20px;
+    padding: 110px 20px 90px;
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
+    url('https://i.imgur.com/cIxrYJd_d.png?maxwidth=520&shape=thumb&fidelity=high');
     background-size: cover;
     background-position: center;
 }
@@ -48,11 +82,27 @@ body {
     margin: auto;
 }
 
-/* CTA BUTTON */
+/* INLINE CALL BUTTON + IMAGE */
+.call-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.call-inline img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
 .cta {
     display: inline-block;
-    margin-top: 25px;
-    padding: 18px 38px;
+    padding: 18px 28px;
     background: #ff3b30;
     color: white;
     text-decoration: none;
@@ -61,7 +111,7 @@ body {
     font-size: 18px;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
     background: white;
     color: #111;
@@ -76,20 +126,34 @@ body {
 h2 {
     color: #0b3d91;
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+p {
+    margin-bottom: 15px;
 }
 
-.card {
-    background: #f4f7fa;
-    padding: 22px;
-    border-radius: 10px;
-    border-left: 5px solid #0b3d91;
+/* CALL BUTTON INSIDE SECTIONS */
+.call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 12px 18px;
+    background: #ff3b30;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.call-btn img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid white;
 }
 
 /* CONTACT */
@@ -100,7 +164,7 @@ h2 {
     text-align: center;
 }
 
-/* FLOATING CALL BUTTON (VERY IMPORTANT FOR BOUNCE RATE) */
+/* FLOATING CALL */
 .floating-call {
     position: fixed;
     bottom: 20px;
@@ -124,69 +188,84 @@ h2 {
 
 <body>
 
-<div class="hero">
+<nav>
+  <div class="nav-container">
+    <a href="#blocked-drain">Blocked Drain</a>
+    <a href="#blocked-shower">Blocked Shower</a>
+    <a href="#blocked-basin">Blocked Basin</a>
+    <a href="#blocked-sink">Blocked Sink</a>
+    <a href="#blocked-toilet">Blocked Toilet</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero" id="blocked-drain">
     <h1>Blocked Drain in Springs?</h1>
-    <p>
-        Fast emergency service for toilets, showers, baths, sinks, sewer lines & all home blockages.
-    </p>
+    <p>Fast emergency service for toilets, showers, baths, sinks, sewer lines & all home blockages.</p>
 
-    <a href="tel:0815295737"
-       onclick="gtag('event', 'conversion', {'send_to': 'AW-18107368407/LEAD'});"
-       class="cta">
-       📞 Call Now: 081 529 5737
-    </a>
+    <!-- INLINE IMAGE + CALL BUTTON -->
+    <div class="call-inline">
+        <img src="https://i.imgur.com/w56sHXy_d.png?maxwidth=520&shape=thumb&fidelity=high" alt="Plumber">
+        <a href="tel:0815295737" class="cta">📞 Call Now: 081 529 5737</a>
+    </div>
 </div>
 
-<div class="section">
+<div class="section" id="blocked-shower">
 <div class="container">
+<h2>Blocked Shower Drain</h2>
+<p>Hair, soap build-up & slow draining showers cleared fast in Springs.</p>
 
-<h2>We Fix All Blockages in Your Home</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>🚽 Blocked Toilet</h3>
-<p>Fast toilet bowl blockage removal in Springs.</p>
-</div>
-
-<div class="card">
-<h3>🚿 Blocked Shower Drain</h3>
-<p>Hair, soap & deep pipe blockages cleared fast.</p>
-</div>
-
-<div class="card">
-<h3>🛁 Blocked Bath Drain</h3>
-<p>Bath water not draining? We fix it quickly.</p>
-</div>
-
-<div class="card">
-<h3>🏠 Blocked Drain Outside</h3>
-<p>External drain and yard blockages removed.</p>
-</div>
-
-<div class="card">
-<h3>🚨 Blocked Sewer Line</h3>
-<p>Serious sewer backups handled professionally.</p>
-</div>
-
-<div class="card">
-<h3>🚰 Sink & Bathroom Drain</h3>
-<p>Kitchen & bathroom drainage problems solved.</p>
-</div>
-
-</div>
-
+<a href="tel:0815295737" class="call-btn">
+<img src="https://i.imgur.com/w56sHXy_d.png?maxwidth=520&shape=thumb&fidelity=high">
+📞 Call Now for Shower Blockage
+</a>
 </div>
 </div>
 
-<div class="contact">
+<div class="section" id="blocked-basin">
+<div class="container">
+<h2>Blocked Basin</h2>
+<p>Bathroom basins not draining? We remove deep blockages quickly.</p>
+
+<a href="tel:0815295737" class="call-btn">
+<img src="https://i.imgur.com/w56sHXy_d.png?maxwidth=520&shape=thumb&fidelity=high">
+📞 Call Now for Basin Blockage
+</a>
+</div>
+</div>
+
+<div class="section" id="blocked-sink">
+<div class="container">
+<h2>Blocked Sink</h2>
+<p>Kitchen sink blockages cleared fast so your water flows again.</p>
+
+<a href="tel:0815295737" class="call-btn">
+<img src="https://i.imgur.com/w56sHXy_d.png?maxwidth=520&shape=thumb&fidelity=high">
+📞 Call Now for Sink Blockage
+</a>
+</div>
+</div>
+
+<div class="section" id="blocked-toilet">
+<div class="container">
+<h2>Blocked Toilet</h2>
+<p>Fast toilet blockage removal and emergency unblocking service in Springs.</p>
+
+<a href="tel:0815295737" class="call-btn">
+<img src="https://i.imgur.com/w56sHXy_d.png?maxwidth=520&shape=thumb&fidelity=high">
+📞 Call Now for Toilet Blockage
+</a>
+</div>
+</div>
+
+<div class="contact" id="contact">
 <h2>Emergency Drain Help in Springs</h2>
 <p><strong>Call:</strong> 081 529 5737</p>
 <p><strong>Email:</strong> yournr1localplumber@gmail.com</p>
+
 <br>
-<a href="tel:0815295737"
-   onclick="gtag('event', 'conversion', {'send_to': 'AW-18107368407/LEAD'});"
-   class="cta">
+
+<a href="tel:0815295737" class="cta">
 📞 Call Now for Immediate Help
 </a>
 </div>
@@ -195,10 +274,7 @@ h2 {
 24/7 Drain & Blockage Emergency Service in Springs
 </footer>
 
-<!-- FLOATING CALL BUTTON -->
-<a class="floating-call"
-   href="tel:0815295737"
-   onclick="gtag('event', 'conversion', {'send_to': 'AW-18107368407/LEAD'});">
+<a class="floating-call" href="tel:0815295737">
 📞 CALL
 </a>
 
