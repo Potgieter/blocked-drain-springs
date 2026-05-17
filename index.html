@@ -997,12 +997,17 @@ There are no hidden costs — only professional, reliable plumbers committed to 
     </script>
 
     <!-- ADTRUTH TRACKING SCRIPT -->
+<!-- ADTRUTH TRACKING SCRIPT (Self-Hosted Version) -->
 <script>
 (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = 'https://cdn.jsdelivr.net/gh/papa-torb/adtruth@latest/dist/adtruth.min.js';
+    
+    // IMPORTANT: Change the line below if you put the file in a subfolder
+    // For example, if you put it in a 'js' folder, use: '/js/adtruth.min.js'
+    js.src = 'adtruth.min.js'; 
+    
     js.onload = function() {
         AdTruth.init('at_61a36850628747f4b8ad5c1a179dec38');
     };
